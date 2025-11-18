@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MTTI | Services</title>
+  <style>
+    /* ======== GLOBAL STYLES ======== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      color: #0a5c36;
+      background-color: #fff;
+      scroll-behavior: smooth;
+    }
+
+    /* ======== HEADER ======== */
+    header {
+      background: linear-gradient(90deg, #0a5c36, #067a45);
+      color: #fff;
+      text-align: center;
+      padding: 20px 10px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      padding: 5px 10px;
+    }
+
+    nav a:hover {
+      background-color: #f4d03f;
+      color: #0a5c36;
+      border-radius: 5px;
+    }
+
+    /* ======== SECTIONS ======== */
+    section {
+      padding: 60px 20px;
+      text-align: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    h2 {
+      color: #0a5c36;
+      margin-bottom: 20px;
+      font-size: 2em;
+    }
+
+    h3 {
+      color: #064420;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: black;
+      margin-bottom: 15px;
+      font-weight: 500;
+    }
+
+    ul {
+      list-style: none;
+      margin: 20px auto;
+      max-width: 800px;
+      text-align: left;
+    }
+
+    ul li {
+      background: #f8fdf9;
+      margin: 10px 0;
+      padding: 12px 16px;
+      border-left: 5px solid #0a5c36;
+      border-radius: 6px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    ul li:hover {
+      transform: translateX(5px);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    /* ======== CTA BUTTON ======== */
+    .cta-button {
+      display: inline-block;
+      background-color: #0a5c36;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 6px;
+      text-decoration: none;
+      margin: 25px 0;
+      transition: background 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #f4d03f;
+      color: #0a5c36;
+    }
+
+    /* ======== SERVICE GRID ======== */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1100px;
+      margin: 40px auto;
+    }
+
+    .card {
+      background-color: #f8fdf9;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    /* ======== FOOTER ======== */
+    footer {
+      background: #0a5c36;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+    }
+
+    /* ======== ANIMATIONS ======== */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    section, .card {
+      animation: fadeUp 0.8s ease;
+    }
+
+    /* ======== RESPONSIVE ======== */
+    @media (max-width: 768px) {
+      section {
+        padding: 40px 15px;
+      }
+      ul {
+        text-align: left;
+        padding: 0 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ======== HEADER ======== -->
+  <header>
+    <h1>Our Services & Programs</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ======== INTRO SECTION ======== -->
+  <section>
+    <h2>What We Do</h2>
+    <p>
+      We provide comprehensive agricultural services designed to support farmers and promote 
+      sustainable farming practices. Our offerings include expert guidance on modern farming, 
+      quality seeds, fertilizers, and crop protection products, as well as precision agriculture
+      and smart irrigation solutions. We also offer customized farm management plans, machinery
+      rental, and maintenance services to improve efficiency and yield. Through our training 
+      programs and consultancy, farmers gain access to expert advice, organic farming support,
+      and market linkage opportunities. In addition, our research and development team focuses
+      on new crop varieties, soil and water testing, and innovative solutions that ensure long-term
+      agricultural growth and sustainability.
+    </p>
+  </section>
+
+  <!-- ======== SERVICES LIST ======== -->
+  <section>
+    <h2>Our Services</h2>
+    <ul>
+      <li><strong>Training programs:</strong> Hands-on training for farmers on modern agricultural practices</li>
+      <li><strong>Technology access:</strong> Providing access to the latest agricultural technology</li>
+      <li><strong>Consultation services:</strong> Expert advice on improving farm productivity</li>
+      <li><strong>Community engagement:</strong> Building networks among farmers to share knowledge and resources</li>
+    </ul>
+    
+
+  <!-- ======== GRID OF SERVICE CARDS ======== -->
+  <section>
+    <div class="grid">
+      <div class="card">
+        <h3>Smart Agriculture & Conservation Farming</h3>
+        <img src="images/agri11.jpg" alt="Smart Agriculture">
+      </div>
+
+      <div class="card">
+        <h3>Soil Fertility & Sustainable Land Use</h3>
+        <img src="images/agri 2.jpg" alt="Soil Fertility">
+      </div>
+
+      <div class="card">
+        <h3>Post-harvest Handling & Food Security</h3>
+        <img src="images/Screenshot 2025-10-30 170602.png" alt="Food Security">
+      </div>
+
+      <div class="card">
+        <h3>Financial Literacy & Enterprise Development</h3>
+        <img src="images/Screenshot 2025-10-30 171359.png" alt="Financial Literacy">
+      </div>
+
+      <div class="card">
+        <h3>Value Addition & Agro-processing</h3>
+        <img src="images/Screenshot 2025-10-30 173444.png" alt="Agro-processing">
+      </div>
+
+      <div class="card">
+        <h3>Capacity Building & Trainings</h3>
+        <img src="images/NURI-project-impact-Improved-agronomic-methods-skills-practices-2.jpg" alt="Capacity Building">
+      </div>
+
+      <div class="card">
+        <h3>ICT Literacy & Digital Agriculture</h3>
+        <img src="images/Screenshot 2025-10-30 185737 - Copy.png" alt="ICT Literacy">
+      </div>
+
+      <div class="card">
+        <h3>Disaster Preparedness & Emergency Response</h3>
+        <img src="images/l2.tmb-th600x400.png" alt="Disaster Preparedness">
+      </div>
+      <div class="card">
+        <h3>Farmer Group Strengthening & Saving Associations</h3>
+        <img src="images/group.jpg">
+      </div>
+
+      
+    </div>
+
+    <p style="color: black; font-weight: 700; text-align: center; margin-top: 30px;">
+      At MTTI we believe that sustainable farming is the foundation of a healthy planet.<br>
+      Our services are built around eco-friendly solutions that enhance productivity while protecting natural
+      resources for future generations.
+    </p>
+  </section>
+  <a class="cta-button" href="contact.html">Contact us for more information</a>
+  </section>
+
+  <!-- ======== FOOTER ======== -->
+  <footer>
+    <p>&copy; 2025 MTTI Uganda | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>

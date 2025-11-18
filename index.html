@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MTTI | Masaka Technology Transfer Initiative</title>
+  <style>
+    /* ========== GLOBAL STYLES ========== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      color: #0a5c36;
+      background-color: #ffffff;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: linear-gradient(90deg, #0a5c36, #067a45);
+      color: white;
+      padding: 15px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+    }
+
+    header img {
+      width: 95%;
+      margin-bottom: 10px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      padding: 5px 10px;
+    }
+
+    nav a:hover {
+      background-color: #f4d03f;
+      color: #0a5c36;
+      border-radius: 5px;
+    }
+
+    /* ========== HERO SECTION ========== */
+    .hero {
+      background: linear-gradient(rgba(71, 138, 227, 0.7), rgba(54, 131, 99, 0.7)), 
+                  url('images/back.jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .hero h1 {
+      font-size: 2.8em;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      max-width: 700px;
+      line-height: 1.6;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ========== INTRO SECTION ========== */
+    .intro {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .intro img {
+      height: 100%;
+    }
+
+    .intro-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .card {
+      background: #f8fdf9;
+      width: 45%;
+      min-width: 300px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .card p {
+      padding: 15px;
+      text-align: left;
+      line-height: 1.6;
+    }
+
+    /* ========== MISSION SECTION ========== */
+    .mission {
+      background-color: #f0fff6;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .mission h2 {
+      color: #0a5c36;
+      margin-bottom: 20px;
+    }
+
+    .mission p {
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.8;
+      font-size: 1.1em;
+    }
+
+    /* ========== ACTIVITIES SECTION ========== */
+    .activities {
+      padding: 60px 20px;
+      text-align: center;
+      background: #ffffff;
+    }
+
+    .activities h2 {
+      color: #0a5c36;
+      font-size: 2em;
+      margin-bottom: 30px;
+    }
+
+    .activity-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .activity-card {
+      background: #f8fdf9;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .activity-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    }
+
+    .activity-card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 25px;
+      background-color: #0a5c36;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #f4d03f;
+      color: #0a5c36;
+    }
+
+    /* ========== FOOTER ========== */
+    footer {
+      background: #0a5c36;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    /* ========== RESPONSIVE DESIGN ========== */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2em; }
+      .hero p { font-size: 1em; }
+      .card { width: 100%; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ======== HEADER ======== -->
+  <header>
+    <img src="images/Screenshot 2025-10-31 124428.png" alt="MTTI Logo">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ======== HERO ======== -->
+  <section class="hero" id="home">
+    <h1>WELCOME TO MTTI</h1>
+    <p>Empowering Farmers for a Brighter Future. Transforming subsistence farming into sustainable agribusiness.</p>
+  </section>
+
+  <!-- ======== INTRO ======== -->
+  <section class="intro" id="about">
+    <div class="intro-content">
+      <div class="card">
+        
+        <p>
+          Masaka Technology Transfer Initiative (MTTI) is a Christ-centered, farmer-focused, non-profit organization based in Kyanamukaaka, Masaka District, Uganda. 
+          We empower rural smallholder farmers with practical knowledge, skills, tools, and financial literacy to transition from subsistence to sustainable agribusiness.
+        </p>
+        <img src="images/agri10.jpg" alt="Farmers">
+      </div>
+      <div class="card">
+     
+        <p>
+          Through partnerships, training, and innovation, MTTI promotes sustainable farming practices that enhance income and food security.
+        </p>
+         <img src="images/agri 2.jpg" alt="Agriculture Tools" height="600%">
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== MISSION ======== -->
+  <section class="mission">
+    <h2>Our Overall Goal</h2>
+    <p>To increase rural incomes and household food and nutrition security in line with Uganda's national agricultural development strategies.</p>
+  </section>
+
+  <!-- ======== ACTIVITIES ======== -->
+  <section class="activities" id="services">
+    <h2>Our Key Activities</h2>
+    <div class="activity-grid">
+      <div class="activity-card">
+        <h3>Smart Agriculture</h3>
+        <p>Promoting climate-smart and conservation farming methods that enhance productivity and protect the environment.</p>
+        <img src="images/image15.jpeg" alt="">
+      </div>
+      <div class="activity-card">
+        
+        <h3>Financial Literacy</h3>
+        <p>Equipping farmers with financial management skills and helping them form saving groups to improve livelihoods.</p>
+        <img src="images/images (11).jpeg" alt="">
+      </div>
+      <div class="activity-card">
+       
+        <h3>Value Addition</h3>
+        <p>Supporting farmers in agro-processing and packaging to increase market value and reduce post-harvest losses.</p>
+        <img src="images/images (8).jpeg" alt="" height="70%">
+      </div>
+      <div class="activity-card">
+        <h3>Capacity Building</h3>
+        <p>  Workshops & Trainings
+
+Conducting farmer field days, community trainings, and outreach sessions.<br>
+
+Offering customized agribusiness training to organizations and institutions.<br>
+
+Building capacity in modern farming, agribusiness, and community development.<br>
+</p>
+      </div>
+      <div class="activity-card">
+        <h3>Disaster Preparedness & Emergency Response</h3>
+        <p>
+
+Training communities on disaster risk reduction.<br>
+
+Building resilience to climate change and environmental hazards.<br>
+
+Coordinating local-level emergency response actions.<br>
+</p>
+      </div>
+      <div class="activity-card">
+        <h3>Farmer Group Strengthening & Saving Associations</h3>
+        <p>
+
+Supporting formation and leadership of farmer groups.<br>
+
+Strengthening community-based organizations and cooperatives.<br>
+
+Empowering groups to become self-sustaining.<br>
+
+</p>
+      </div>
+
+    </div>
+    <a href="about.html" class="cta-button">Explore More</a>
+  </section>
+
+  <!-- ======== FOOTER ======== -->
+  <footer id="contact">
+    <p>&copy; 2025 MTTI Uganda | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
